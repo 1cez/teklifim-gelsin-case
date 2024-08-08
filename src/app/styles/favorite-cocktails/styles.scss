@@ -1,0 +1,41 @@
+.saved-cocktails-container {
+  padding: 20px;
+  .saved-cocktails-list {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    .saved-cocktails-item {
+      position: relative;
+      width: 200px;
+      height: 300px;
+      .saved-cocktails-card {
+        position: relative;
+        .ant-card-meta-description {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .card-heart-icon-active {
+        color: red;
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+        & svg {
+          width: 20px;
+          height: 20px;
+          &:hover {
+            transition: 0.6s;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+}

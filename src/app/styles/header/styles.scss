@@ -1,0 +1,72 @@
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1000;
+  transition: box-shadow 0.3s ease-in-out;
+  padding: 20px 30px;
+
+  &.header-scrolled {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+      rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+
+  .header-logo {
+    flex: 1;
+    text-align: center;
+    & a {
+      color: red;
+      font-weight: 600;
+      & img {
+        width: 200px;
+        height: 40px;
+      }
+    }
+  }
+
+  .header-action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    .header-action-basket {
+      .header-action-basket-icon {
+        width: 25px;
+        height: 25px;
+        color: rgb(245, 7, 7);
+        cursor: pointer;
+        &:hover {
+          color: rgb(167, 18, 18);
+          transition: 0.3s;
+        }
+      }
+    }
+    & a {
+      .header-saved {
+        .header-saved-icon {
+          color: rgb(109, 107, 107);
+          width: 25px;
+          height: 25px;
+          cursor: pointer;
+          &:hover {
+            color: rgb(209, 198, 198);
+            transition: 0.3s;
+          }
+        }
+      }
+    }
+    .header-logout-icon {
+      width: 25px;
+      height: 25px;
+      padding-bottom: 3px;
+      cursor: pointer;
+      &:hover {
+        color: rgb(211, 196, 196);
+        transition: 0.3s;
+      }
+    }
+  }
+}

@@ -1,0 +1,56 @@
+.basket-card-container {
+  display: flex;
+  width: 100%;
+  gap: 6px;
+  border: 1px solid lightgray;
+  border-radius: 8px;
+  position: relative;
+  .basket-card-thumbnail {
+    & img {
+      width: 100px;
+      height: 100%;
+      border-radius: 8px 0px 0px 8px;
+    }
+  }
+  .basket-card-count {
+    position: absolute;
+    left: 8px;
+    top: 4px;
+    color: white;
+    font-size: 12px;
+  }
+  .basket-card-info {
+    padding: 12px;
+    position: relative;
+    width: 100%;
+    .basket-card-title {
+      font-weight: 600;
+    }
+    .basket-card-description {
+      color: rgba(0, 0, 0, 0.45);
+      font-size: 11px;
+      font-weight: 400;
+      max-height: calc(3 * 1.2em);
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .basket-card-heart-icon-active {
+      color: red;
+    }
+    .basket-card-heart-icon {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      cursor: pointer;
+      & span {
+        & svg {
+          &:hover {
+            transition: 0.3s;
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+    }
+  }
+}

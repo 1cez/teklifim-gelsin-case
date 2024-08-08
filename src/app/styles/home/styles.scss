@@ -1,0 +1,51 @@
+@import "../mixin";
+
+.home-container {
+  padding: 20px;
+  .home-cocktails-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    @include laptop {
+      grid-template-columns: repeat(4, 1fr);
+    }
+    @include tablet {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .home-cocktails-item {
+      position: relative;
+      width: 100%;
+      .home-cocktails-card {
+        position: relative;
+        .ant-card-meta-description {
+          display: -webkit-box;
+          -webkit-line-clamp: 1;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+      .card-basket-icon {
+        color: white;
+        position: absolute;
+        cursor: pointer;
+        top: 10px;
+        right: 10px;
+        z-index: 2;
+        & svg {
+          width: 20px;
+          height: 20px;
+          &:hover {
+            transition: 0.6s;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      .card-icon-active {
+        color: red;
+      }
+    }
+  }
+}
